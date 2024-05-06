@@ -8,9 +8,15 @@ export type SpeedProps = {
   primaryColor: string;
   iconsColor: string;
   videoRef: React.RefObject<HTMLVideoElement>;
+  videoContainerRef: React.RefObject<HTMLDivElement>;
 };
 
-const Speed = ({ primaryColor, iconsColor, videoRef }: SpeedProps) => {
+const Speed = ({
+  primaryColor,
+  iconsColor,
+  videoRef,
+  videoContainerRef,
+}: SpeedProps) => {
   const { speed, dispatch } = useVideo() as {
     speed: number;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,6 +40,13 @@ const Speed = ({ primaryColor, iconsColor, videoRef }: SpeedProps) => {
       className="speedContainer"
       primaryColor={primaryColor}
       onClick={onChangeVideoSpeedHandler}
+      otherStyles={{
+        display:
+          videoContainerRef.current?.offsetWidth &&
+          videoContainerRef.current.offsetWidth < 570
+            ? "none"
+            : undefined,
+      }}
     >
       <span
         className="speed"

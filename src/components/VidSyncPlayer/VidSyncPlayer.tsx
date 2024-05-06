@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./VidSyncPlayer.css";
 import { useRef, useState, VideoHTMLAttributes } from "react";
 import { useVideo, VideoProvider } from "../../contexts/VideoProvider";
@@ -48,6 +47,8 @@ const Player = ({
   ...props
 }: VidSyncPlayerProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const videContainerRef = useRef<HTMLDivElement>(null);
+
   const { isPlaying, timelineProgress, handle, dispatch } = useVideo() as {
     isPlaying: boolean;
     timelineProgress: number;
@@ -88,6 +89,7 @@ const Player = ({
   return (
     <ReactFullScreen handle={handle}>
       <div
+        ref={videContainerRef}
         className="videoContainer"
         style={{
           ...containerStyles,
@@ -178,7 +180,11 @@ const Player = ({
                 videoRef={videoRef}
               />
 
-              <Timer primaryColor={primaryColor!} iconsColor={iconsColor!} />
+              <Timer
+                primaryColor={primaryColor!}
+                iconsColor={iconsColor!}
+                videoContainerRef={videContainerRef}
+              />
             </div>
 
             <div
@@ -192,6 +198,7 @@ const Player = ({
                 primaryColor={primaryColor!}
                 iconsColor={iconsColor!}
                 videoRef={videoRef}
+                videoContainerRef={videContainerRef}
               />
 
               <PIP
