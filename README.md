@@ -1,10 +1,13 @@
 # VidSync 🎬
 
+🔗⚡[Demo Link ](https://vidsync-44lu8igvs-benmrad-bilels-projects.vercel.app/)
+🎨 Absolutely! Here's a captivating description for your package:
+
 🎬 VidSync: Enhance Your Video Experience! 📹
 
 VidSync is your all-in-one solution for turbocharging the native HTML video player in your React applications. 🚀 Whether you're streaming, presenting, or creating interactive media experiences, VidSync has got you covered!
 
-With VidSync, you can seamlessly switch between multiple videos, effortlessly control playback with intuitive keyboard shortcuts, and enjoy full mobile compatibility. 📱 Plus, unleash your creativity with extensive customization options, allowing you to tailor the video player to perfectly suit your project's style. 🎨
+With VidSync, you can seamlessly switch between multiple videos, effortlessly control playback with intuitive keyboard shortcuts, and enjoy full mobile compatibility. 📱 Plus, unleash your creativity with extensive customization options, allowing you to tailor the video player to perfectly suit your project's style.
 
 Key Features:
 
@@ -22,8 +25,6 @@ Whether you're building a video gallery, an e-learning platform, or a multimedia
 - [Installation](#installation)
 - [Usage](#usage)
 - [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features 🚀
 
@@ -56,7 +57,7 @@ import { VidSyncPlayer } from "vidsync";
 
 type VideoPlayerProps = {
   src: string | string[];
-  poster?: string | string[];
+  poster?: string | stri[];
   index?: number;
 };
 export const VideoPlayer = ({ src, poster, index }: VideoPlayerProps) => {
@@ -73,7 +74,7 @@ import { VidSyncPlayer } from "vidsync";
 
 type VideoPlayerProps = {
   src: string | string[];
-  poster?: string | string[];
+  poster?: string | stri[];
   index?: number;
 };
 export const VideoPlayer = ({ src, poster, index }: VideoPlayerProps) => {
@@ -97,7 +98,7 @@ import { VidSyncPlayer } from "vidsync";
 
 type VideoPlayerProps = {
   src: string | string[];
-  poster?: string | string[];
+  poster?: string | stri[];
   index?: number;
 };
 export const VideoPlayer = ({ src, poster, index }: VideoPlayerProps) => {
