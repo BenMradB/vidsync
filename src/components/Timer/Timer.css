@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 6px;
-  min-width: 120px;
+  min-width: 150px;
   font-weight: bold;
   padding: 3px 10px;
   display: none;
