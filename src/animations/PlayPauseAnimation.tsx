@@ -1,22 +1,85 @@
 import React from "react";
-
 import { useVideo } from "../contexts/VideoProvider";
 
 export type PlayPauseAnimationProps = {
   primaryColor: string;
   iconsColor: string;
+  videoRef: React.RefObject<HTMLVideoElement>;
 };
 
 const PlayPauseAnimation = ({
   primaryColor,
   iconsColor,
+  videoRef,
 }: PlayPauseAnimationProps) => {
-  const { showPlayAnimation, isPlaying } = useVideo() as {
+  const { showPlayAnimation, isPlaying, dispatch } = useVideo() as {
     showPlayAnimation: boolean;
     isPlaying: boolean;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    dispatch: React.Dispatch<any>;
   };
   return (
     <>
+      {!isPlaying && !showPlayAnimation ? (
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: primaryColor,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "70px",
+              height: "70px",
+              borderRadius: "50%",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              if (videoRef.current) {
+                videoRef.current.play();
+                dispatch({ type: "video/play" });
+              }
+              dispatch({ type: "video/toggleShowPlayAnimation" });
+              setTimeout(() => {
+                dispatch({ type: "video/toggleShowPlayAnimation" });
+              }, 500);
+            }}
+          >
+            <svg
+              width="40px"
+              height="40px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  d="M21.4086 9.35258C23.5305 10.5065 23.5305 13.4935 21.4086 14.6474L8.59662 21.6145C6.53435 22.736 4 21.2763 4 18.9671L4 5.0329C4 2.72368 6.53435 1.26402 8.59661 2.38548L21.4086 9.35258Z"
+                  fill={iconsColor}
+                ></path>{" "}
+              </g>
+            </svg>
+          </div>
+        </div>
+      ) : null}
+
       {showPlayAnimation ? (
         <div
           style={{

@@ -96,6 +96,7 @@ const Player = ({
         <PlayPauseAnimation
           primaryColor={primaryColor!}
           iconsColor={iconsColor!}
+          videoRef={videoRef}
         />
 
         <RevertAnimation
