@@ -1,7 +1,13 @@
 {
   "name": "vidsync",
   "version": "0.0.4",
-  "description": "VidSync Player is a react component for playing videos in a modern way by adding enhancing the UX and also it is fully customizable",
+  "description": "Absolutely! Here's a captivating description for your package: 🎬 VidSync: Enhance Your Video Experience! 📹 VidSync is your all-in-one solution for turbocharging the native HTML video player in your React applications. 🚀 Whether you're streaming, presenting, or creating interactive media experiences, VidSync has got you covered! With VidSync, you can seamlessly switch between multiple videos, effortlessly control playback with intuitive keyboard shortcuts, and enjoy full mobile compatibility. 📱 Plus, unleash your creativity with extensive customization options, allowing you to tailor the video player to perfectly suit your project's style. 🎨 Key Features:
+    🔄 Switch between multiple videos on the fly.
+    🎮 Intuitive keyboard shortcuts for convenient playback control.
+    🖌️ Fully customizable styling to match your project's aesthetic.
+    📱 Mobile-friendly design ensures a smooth experience on any device.
+    🚀 Lightweight and easy to integrate into your React applications.
+    Whether you're building a video gallery, an e-learning platform, or a multimedia presentation, VidSync empowers you to deliver a seamless and engaging video experience to your users. Try VidSync today and take your video playback to the next level! 💫",
   "main": "dist/cjs/index.js",
   "type": "module",
   "files": [
