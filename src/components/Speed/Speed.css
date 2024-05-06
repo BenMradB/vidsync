@@ -1,0 +1,16 @@
+.speedContainer {
+  min-width: 50px;
+  padding: 3px 10px;
+  display: none;
+}
+
+.speed {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .speedContainer {
+    display: block;
+  }
+}

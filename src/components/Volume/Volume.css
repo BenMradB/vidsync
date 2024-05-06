@@ -1,0 +1,17 @@
+.volumeContainer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.volumeContainer input[type="range"] {
+  transition: all 0.3s ease-in-out;
+  width: 0;
+  transform: scaleX(0);
+  cursor: grabbing;
+}
+
+.volumeContainer:hover input[type="range"] {
+  width: 100px;
+  transform: scaleX(1);
+}

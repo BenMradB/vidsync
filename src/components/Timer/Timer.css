@@ -1,0 +1,16 @@
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+  font-weight: bold;
+  padding: 3px 10px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .timer {
+    display: block;
+  }
+}
