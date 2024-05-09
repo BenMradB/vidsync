@@ -1,7 +1,6 @@
 # VidSync 🎬
 
 🔗⚡[Demo Link ](https://vidsync-44lu8igvs-benmrad-bilels-projects.vercel.app/)
-🎨 Absolutely! Here's a captivating description for your package:
 
 🎬 VidSync: Enhance Your Video Experience! 📹
 
